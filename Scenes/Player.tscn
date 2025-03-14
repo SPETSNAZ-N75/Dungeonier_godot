@@ -1,0 +1,122 @@
+[gd_scene load_steps=16 format=3 uid="uid://dlgyfytoxwkyc"]
+
+[ext_resource type="Script" uid="uid://bnxmjphf3d0wj" path="res://Scripts/player.gd" id="1_52ee3"]
+[ext_resource type="Texture2D" uid="uid://wbwhwlccgeq3" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_1.png" id="1_nn08x"]
+[ext_resource type="Texture2D" uid="uid://dmtwt2er5yc77" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_2.png" id="2_52ee3"]
+[ext_resource type="Texture2D" uid="uid://c33vur3mfvh5g" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_3.png" id="3_bhhdu"]
+[ext_resource type="Texture2D" uid="uid://cuyhwyajfqv2p" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_4.png" id="4_megsn"]
+[ext_resource type="Texture2D" uid="uid://b11a1c4ufadom" path="res://Assets/character and tileset/Dungeon_Character.png" id="5_yoq75"]
+[ext_resource type="Texture2D" uid="uid://conwokxyqm3ye" path="res://Assets/character and tileset/Dungeon_Character_2.png" id="6_ksbbd"]
+[ext_resource type="PackedScene" uid="uid://4boxwssfylk3" path="res://Scenes/touch_dpad.tscn" id="8_bhhdu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glx4g"]
+size = Vector2(12, 7)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e7my"]
+atlas = ExtResource("6_ksbbd")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arntx"]
+atlas = ExtResource("6_ksbbd")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lslt6"]
+atlas = ExtResource("6_ksbbd")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_miouo"]
+atlas = ExtResource("5_yoq75")
+region = Rect2(96, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o3h8g"]
+atlas = ExtResource("5_yoq75")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulo2v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e7my")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arntx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lslt6")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nn08x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_52ee3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bhhdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_megsn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_miouo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o3h8g")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_52ee3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 3.5)
+shape = SubResource("RectangleShape2D_glx4g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ulo2v")
+animation = &"attack"
+autoplay = "idle"
+
+[node name="AttackTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(16, 0)
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 907.0
+offset_bottom = 510.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+ratio = 1.777
+metadata/_edit_use_anchors_ = true
+
+[node name="touch_dpad" parent="AspectRatioContainer" instance=ExtResource("8_bhhdu")]
+scale = Vector2(2.66667, 2.66667)
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

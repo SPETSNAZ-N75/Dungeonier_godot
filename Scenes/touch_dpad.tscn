@@ -1,0 +1,85 @@
+[gd_scene load_steps=15 format=3 uid="uid://4boxwssfylk3"]
+
+[ext_resource type="Texture2D" uid="uid://dehcpgn3dvxjt" path="res://Assets/Gui/dpad_sheet.png" id="1_c20tx"]
+[ext_resource type="Texture2D" uid="uid://byo3tinw8dur2" path="res://Assets/Gui/dpad_pressed_sheet.png" id="2_kmajj"]
+[ext_resource type="Texture2D" uid="uid://ro7ueyhmj3g8" path="res://Assets/Gui/btn_attack_normal.png" id="3_iteyb"]
+[ext_resource type="Texture2D" uid="uid://bikqcm5ddpesv" path="res://Assets/Gui/btn_attack_pressed.png" id="4_m4ymi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmajj"]
+atlas = ExtResource("1_c20tx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xum43"]
+atlas = ExtResource("2_kmajj")
+region = Rect2(0, 0, 32, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c20tx"]
+size = Vector2(22, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c20tx"]
+atlas = ExtResource("1_c20tx")
+region = Rect2(64, 0, 32, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc2b7"]
+atlas = ExtResource("2_kmajj")
+region = Rect2(64, 0, 32, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmajj"]
+size = Vector2(22, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi0di"]
+atlas = ExtResource("1_c20tx")
+region = Rect2(32, 0, 32, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqadq"]
+atlas = ExtResource("2_kmajj")
+region = Rect2(32, 0, 32, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xum43"]
+size = Vector2(32, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iteyb"]
+size = Vector2(32, 32)
+
+[node name="touch_dpad" type="CanvasGroup"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="dpad_up" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(176, 386)
+scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_kmajj")
+texture_pressed = SubResource("AtlasTexture_xum43")
+shape = SubResource("RectangleShape2D_c20tx")
+action = "up"
+
+[node name="dpad_down" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(177, 548)
+scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_c20tx")
+texture_pressed = SubResource("AtlasTexture_rc2b7")
+shape = SubResource("RectangleShape2D_kmajj")
+action = "down"
+
+[node name="dpad_left" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(96, 467)
+scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_yi0di")
+texture_pressed = SubResource("AtlasTexture_rqadq")
+shape = SubResource("RectangleShape2D_xum43")
+action = "left"
+
+[node name="dpad_right" type="Button" parent="CanvasLayer"]
+offset_left = 257.0
+offset_top = 467.0
+offset_right = 257.0
+offset_bottom = 467.0
+scale = Vector2(3, 3)
+
+[node name="btn_attack" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(946, 490)
+scale = Vector2(3, 3)
+texture_normal = ExtResource("3_iteyb")
+texture_pressed = ExtResource("4_m4ymi")
+shape = SubResource("RectangleShape2D_iteyb")
+action = "use"
