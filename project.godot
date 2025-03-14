@@ -23,6 +23,10 @@ config/icon="uid://brdx5qclm85d1"
 config/windows_native_icon="res://Assets/icon/icon.ico"
 boot_splash/minimum_display_time=2000
 
+[autoload]
+
+EnemyHealthManager="*res://Scripts/EnemyHealthManager.gd"
+
 [display]
 
 window/size/viewport_width=1280

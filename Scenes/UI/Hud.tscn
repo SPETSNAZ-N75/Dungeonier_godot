@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://blva671neb6c1"]
+
+[ext_resource type="Script" uid="uid://by8177pff6f1v" path="res://Scripts/hud.gd" id="1_3jfbl"]
+[ext_resource type="Texture2D" uid="uid://dtj56u4nyacec" path="res://Assets/Gui/Health/health_border.png" id="1_chfh5"]
+[ext_resource type="Texture2D" uid="uid://ck4yo4v1s8f74" path="res://Assets/Gui/Health/health.png" id="2_8vcfy"]
+[ext_resource type="Texture2D" uid="uid://b6khfrsxvaq67" path="res://Assets/Gui/Health/mana.png" id="3_puttd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vcfy"]
+texture = ExtResource("1_chfh5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_puttd"]
+texture = ExtResource("2_8vcfy")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3jfbl"]
+texture = ExtResource("1_chfh5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3j5vs"]
+texture = ExtResource("3_puttd")
+
+[node name="Hud" type="CanvasGroup"]
+script = ExtResource("1_3jfbl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 248.0
+offset_top = 16.0
+offset_right = 424.0
+offset_bottom = 24.0
+theme_override_styles/background = SubResource("StyleBoxTexture_8vcfy")
+theme_override_styles/fill = SubResource("StyleBoxTexture_puttd")
+value = 50.0
+show_percentage = false
+
+[node name="manaBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 56.0
+offset_top = 16.0
+offset_right = 232.0
+offset_bottom = 24.0
+theme_override_styles/background = SubResource("StyleBoxTexture_3jfbl")
+theme_override_styles/fill = SubResource("StyleBoxTexture_3j5vs")
+value = 50.0
+fill_mode = 1
+show_percentage = false

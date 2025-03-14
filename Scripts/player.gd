@@ -3,8 +3,12 @@ extends CharacterBody2D
 @onready var ray_cast: RayCast2D = $RayCast2D
 
 @export var SPEED = 100
+var health = 100.0
+var mana = 100.0
+var damage = 5.0
 
-signal hit
+signal hit(collider)
+var hit_object:Object
 
 var bIsAttacking:bool 
 
@@ -59,5 +63,12 @@ func _on_attack_timer_timeout() -> void:
 	
 func attack():
 	if ray_cast.is_colliding():
-		emit_signal("hit")
+		if not ray_cast.is_colliding():
+			hit_object = null
+		return
+			
+	var new_hit:Object = ray_cast.get_collider()
+	if new_hit != hit_object:
+		hit_object = new_hit
+		hit.emit(damage)
 		print("hit")

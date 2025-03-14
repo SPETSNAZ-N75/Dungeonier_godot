@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dlgyfytoxwkyc"]
+[gd_scene load_steps=18 format=3 uid="uid://dlgyfytoxwkyc"]
 
 [ext_resource type="Script" uid="uid://bnxmjphf3d0wj" path="res://Scripts/player.gd" id="1_52ee3"]
 [ext_resource type="Texture2D" uid="uid://wbwhwlccgeq3" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_1.png" id="1_nn08x"]
@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cuyhwyajfqv2p" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_4.png" id="4_megsn"]
 [ext_resource type="Texture2D" uid="uid://b11a1c4ufadom" path="res://Assets/character and tileset/Dungeon_Character.png" id="5_yoq75"]
 [ext_resource type="Texture2D" uid="uid://conwokxyqm3ye" path="res://Assets/character and tileset/Dungeon_Character_2.png" id="6_ksbbd"]
-[ext_resource type="PackedScene" uid="uid://4boxwssfylk3" path="res://Scenes/touch_dpad.tscn" id="8_bhhdu"]
+[ext_resource type="PackedScene" uid="uid://4boxwssfylk3" path="res://Scenes/UI/touch_dpad.tscn" id="8_bhhdu"]
 [ext_resource type="Texture2D" uid="uid://dqulkyhw1ywa6" path="res://Assets/interface/arrow_1.png" id="8_megsn"]
+[ext_resource type="PackedScene" uid="uid://blva671neb6c1" path="res://Scenes/UI/Hud.tscn" id="10_yoq75"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glx4g"]
 size = Vector2(12, 7)
@@ -135,4 +136,7 @@ metadata/_edit_use_anchors_ = true
 [node name="touch_dpad" parent="AspectRatioContainer" instance=ExtResource("8_bhhdu")]
 scale = Vector2(2.66667, 2.66667)
 
+[node name="Hud" parent="AspectRatioContainer" instance=ExtResource("10_yoq75")]
+
+[connection signal="hit" from="." to="." method="_on_hit"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]
