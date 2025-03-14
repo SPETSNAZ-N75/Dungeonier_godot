@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://4boxwssfylk3"]
+[gd_scene load_steps=18 format=3 uid="uid://4boxwssfylk3"]
 
 [ext_resource type="Texture2D" uid="uid://dehcpgn3dvxjt" path="res://Assets/Gui/dpad_sheet.png" id="1_c20tx"]
 [ext_resource type="Texture2D" uid="uid://byo3tinw8dur2" path="res://Assets/Gui/dpad_pressed_sheet.png" id="2_kmajj"]
@@ -38,6 +38,17 @@ region = Rect2(32, 0, 32, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xum43"]
 size = Vector2(32, 22)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_iteyb"]
+atlas = ExtResource("1_c20tx")
+region = Rect2(96, 0, 32, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4ymi"]
+atlas = ExtResource("1_c20tx")
+region = Rect2(96, 0, 32, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt47r"]
+size = Vector2(32, 22)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iteyb"]
 size = Vector2(32, 32)
 
@@ -46,7 +57,7 @@ size = Vector2(32, 32)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="dpad_up" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(176, 386)
+position = Vector2(184, 376)
 scale = Vector2(3, 3)
 texture_normal = SubResource("AtlasTexture_kmajj")
 texture_pressed = SubResource("AtlasTexture_xum43")
@@ -54,7 +65,7 @@ shape = SubResource("RectangleShape2D_c20tx")
 action = "up"
 
 [node name="dpad_down" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(177, 548)
+position = Vector2(184, 552)
 scale = Vector2(3, 3)
 texture_normal = SubResource("AtlasTexture_c20tx")
 texture_pressed = SubResource("AtlasTexture_rc2b7")
@@ -62,19 +73,20 @@ shape = SubResource("RectangleShape2D_kmajj")
 action = "down"
 
 [node name="dpad_left" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(96, 467)
+position = Vector2(96, 464)
 scale = Vector2(3, 3)
 texture_normal = SubResource("AtlasTexture_yi0di")
 texture_pressed = SubResource("AtlasTexture_rqadq")
 shape = SubResource("RectangleShape2D_xum43")
 action = "left"
 
-[node name="dpad_right" type="Button" parent="CanvasLayer"]
-offset_left = 257.0
-offset_top = 467.0
-offset_right = 257.0
-offset_bottom = 467.0
+[node name="dpad_right" type="TouchScreenButton" parent="CanvasLayer"]
+position = Vector2(272, 464)
 scale = Vector2(3, 3)
+texture_normal = SubResource("AtlasTexture_iteyb")
+texture_pressed = SubResource("AtlasTexture_m4ymi")
+shape = SubResource("RectangleShape2D_bt47r")
+action = "right"
 
 [node name="btn_attack" type="TouchScreenButton" parent="CanvasLayer"]
 position = Vector2(946, 490)
