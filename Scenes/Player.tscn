@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dlgyfytoxwkyc"]
+[gd_scene load_steps=17 format=3 uid="uid://dlgyfytoxwkyc"]
 
 [ext_resource type="Script" uid="uid://bnxmjphf3d0wj" path="res://Scripts/player.gd" id="1_52ee3"]
 [ext_resource type="Texture2D" uid="uid://wbwhwlccgeq3" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_1.png" id="1_nn08x"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b11a1c4ufadom" path="res://Assets/character and tileset/Dungeon_Character.png" id="5_yoq75"]
 [ext_resource type="Texture2D" uid="uid://conwokxyqm3ye" path="res://Assets/character and tileset/Dungeon_Character_2.png" id="6_ksbbd"]
 [ext_resource type="PackedScene" uid="uid://4boxwssfylk3" path="res://Scenes/touch_dpad.tscn" id="8_bhhdu"]
+[ext_resource type="Texture2D" uid="uid://dqulkyhw1ywa6" path="res://Assets/interface/arrow_1.png" id="8_megsn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glx4g"]
 size = Vector2(12, 7)
@@ -100,6 +101,21 @@ position_smoothing_enabled = true
 [node name="RayCast2D" type="RayCast2D" parent="."]
 target_position = Vector2(16, 0)
 
+[node name="ColorRect" type="TextureRect" parent="RayCast2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.58
+offset_top = 7.745
+offset_right = 6.42
+offset_bottom = 39.08
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -1.5708
+texture = ExtResource("8_megsn")
+
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -107,9 +123,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -160.0
-offset_top = -90.0
+offset_top = -88.0
 offset_right = 907.0
-offset_bottom = 510.0
+offset_bottom = 512.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3, 0.3)

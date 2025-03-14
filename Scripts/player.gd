@@ -13,9 +13,19 @@ func Attack():
 
 func _physics_process(_delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction_x := Input.get_axis("left", "right")
 	var direction_y := Input.get_axis("up", "down")
+	
+	var rot_vector := Input.get_vector("left", "right", "up", "down")
+	
+	if rot_vector == Vector2(1,0):
+		ray_cast.rotation_degrees = 0
+	elif rot_vector == Vector2(-1,0):
+		ray_cast.rotation_degrees = 180
+	elif rot_vector == Vector2(0,1):
+		ray_cast.rotation_degrees = 90
+	elif rot_vector == Vector2(0,-1):
+		ray_cast.rotation_degrees = -90
 	
 	if direction_x == 0 && direction_y == 0 && bIsAttacking== false:
 		$AnimatedSprite2D.play("idle")
