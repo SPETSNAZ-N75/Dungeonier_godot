@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://yi1vtrx1xma6"]
+
+[ext_resource type="Script" uid="uid://c08ce1h7q5pwx" path="res://Scenes/main.gd" id="1_r150o"]
+
+[sub_resource type="Animation" id="Animation_c1w88"]
+resource_name = "new_animation"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Int_Left:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-640, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Int_Right:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 0), Vector2(1280, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_idj7w"]
+_data = {
+&"into_scene": SubResource("Animation_c1w88")
+}
+
+[sub_resource type="AnimationRootNode" id="AnimationRootNode_c1w88"]
+
+[node name="Main" type="CanvasGroup"]
+script = ExtResource("1_r150o")
+
+[node name="Int_Left" type="ColorRect" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_right = 645.14
+offset_bottom = 720.0
+grow_vertical = 2
+pivot_offset = Vector2(0, 360)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Int_Right" type="ColorRect" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 640.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(640, 360)
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_idj7w")
+}
+tree_root = SubResource("AnimationRootNode_c1w88")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationTree"]
+root_node = NodePath("../..")
