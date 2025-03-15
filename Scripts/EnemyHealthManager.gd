@@ -2,6 +2,7 @@ extends Node
 
 var maxHealth : int = 50
 var currentHealth : int
+var hit_object : Object
 signal onHealthChange
 
 func _ready() -> void:
@@ -22,3 +23,4 @@ func increaseHealth(healthAmmount : int):
 	
 	print("Health Increased")
 	onHealthChange.emit(currentHealth)
+	

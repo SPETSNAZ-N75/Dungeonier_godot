@@ -54,8 +54,6 @@ func _physics_process(_delta: float) -> void:
 		bIsAttacking = true
 		attack_timer.start()
 		$AnimatedSprite2D.play("attack")
-	
-	if Input.is_action_just_pressed("use"):
 		attack()
 		
 func _on_attack_timer_timeout() -> void:
@@ -63,12 +61,6 @@ func _on_attack_timer_timeout() -> void:
 	
 func attack():
 	if ray_cast.is_colliding():
-		if not ray_cast.is_colliding():
-			hit_object = null
-		return
-			
-	var new_hit:Object = ray_cast.get_collider()
-	if new_hit != hit_object:
-		hit_object = new_hit
-		hit.emit(damage)
-		print("hit")
+		hit_object = ray_cast.get_collider()
+		EnemyHealthManager.hit_object = hit_object
+		EnemyHealthManager.onHealthChange.emit()

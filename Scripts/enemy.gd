@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 @export var MaxHealth : int = 50
 @export var Health : int = 50
-@export var DamageAmmount : int = 1
+@export var DamageAmmount : int = 10
 
 func _ready() -> void:
 	health_bar.value = EnemyHealthManager.currentHealth
@@ -13,5 +13,6 @@ func take_damage():
 	pass
 
 func onTakeDamage():
-	EnemyHealthManager.decreaseHealth(1)
-	health_bar.value = Health
+		if EnemyHealthManager.hit_object == self:
+			EnemyHealthManager.decreaseHealth(DamageAmmount)
+			health_bar.value = EnemyHealthManager.currentHealth
