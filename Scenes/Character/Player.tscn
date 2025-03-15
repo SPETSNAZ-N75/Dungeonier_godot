@@ -138,5 +138,4 @@ scale = Vector2(2.66667, 2.66667)
 
 [node name="Hud" parent="AspectRatioContainer" instance=ExtResource("10_yoq75")]
 
-[connection signal="hit" from="." to="." method="_on_hit"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

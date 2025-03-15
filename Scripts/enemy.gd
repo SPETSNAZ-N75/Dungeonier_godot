@@ -1,25 +1,29 @@
 extends CharacterBody2D
 @onready var health_bar: ProgressBar = $healthBar
+@export var Health : int = 50 
 @export var DamageAmmount : int = 10
 
 func _ready() -> void:
-	health_bar.value = EnemyHealthManager.currentHealth
-	EnemyHealthManager.onHealthChange.connect(onTakeDamage)
+	health_bar.value = Health
+	SignalManager._Hit.connect(onTakeDamage)
 
 func take_damage():
 	pass
 
 func onTakeDamage():
-		if EnemyHealthManager.hit_object == self:
-			EnemyHealthManager.decreaseHealth(DamageAmmount)
-			health_bar.value = EnemyHealthManager.currentHealth
-		if EnemyHealthManager.currentHealth <= 0:
+	if SignalManager.HitObject == self :
+		Health -= DamageAmmount
+		health_bar.value = Health
+		if Health <= 0:
+			Health = 0
+			$healthBar.hide()
 			$AnimatedSprite2D.play("death")
-			collision_layer = 0
-			$deathAnim.start()
+			$KillTimer.start()
 		else:
 			$AnimatedSprite2D.play("hit")
+		print(Health)
+		
 
 
-func _on_death_anim_timeout() -> void:
+func _on_kill_timer_timeout() -> void:
 	queue_free()

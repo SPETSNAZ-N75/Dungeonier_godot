@@ -145,4 +145,7 @@ tile_set = SubResource("TileSet_5a7ea")
 position = Vector2(0, 42)
 
 [node name="Skeleton" parent="." instance=ExtResource("3_nbifx")]
-position = Vector2(241, 2)
+position = Vector2(243, -8)
+
+[node name="Skeleton2" parent="." instance=ExtResource("3_nbifx")]
+position = Vector2(243, 23)

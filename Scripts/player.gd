@@ -62,5 +62,5 @@ func _on_attack_timer_timeout() -> void:
 func attack():
 	if ray_cast.is_colliding():
 		hit_object = ray_cast.get_collider()
-		EnemyHealthManager.hit_object = hit_object
-		EnemyHealthManager.onHealthChange.emit()
+		SignalManager.HitObject = hit_object
+		SignalManager._Hit.emit()

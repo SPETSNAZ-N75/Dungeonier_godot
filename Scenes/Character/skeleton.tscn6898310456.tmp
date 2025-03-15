@@ -223,6 +223,8 @@ bg_color = Color(0.8, 0.16, 0.16, 1)
 
 [node name="Skeleton" type="CharacterBody2D"]
 script = ExtResource("1_eifjv")
+CurrentHealt = null
+DamageAmmount = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -7)
@@ -248,8 +250,8 @@ step = 0.0
 value = 25.0
 show_percentage = false
 
-[node name="KillTimer" type="Timer" parent="."]
+[node name="deathAnim" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
-[connection signal="timeout" from="KillTimer" to="." method="_on_kill_timer_timeout"]
+[connection signal="timeout" from="deathAnim" to="." method="_on_death_anim_timeout"]

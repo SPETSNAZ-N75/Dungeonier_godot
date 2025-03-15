@@ -25,18 +25,13 @@ boot_splash/minimum_display_time=2000
 
 [autoload]
 
-EnemyHealthManager="*res://Scripts/EnemyHealthManager.gd"
+SignalManager="*res://Scripts/SignalManager.gd"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
 
 [input]
 

@@ -43,7 +43,7 @@ atlas = ExtResource("1_c20tx")
 region = Rect2(96, 0, 32, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4ymi"]
-atlas = ExtResource("1_c20tx")
+atlas = ExtResource("2_kmajj")
 region = Rect2(96, 0, 32, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bt47r"]
