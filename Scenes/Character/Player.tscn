@@ -103,6 +103,7 @@ position_smoothing_enabled = true
 target_position = Vector2(16, 0)
 
 [node name="ColorRect" type="TextureRect" parent="RayCast2D"]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

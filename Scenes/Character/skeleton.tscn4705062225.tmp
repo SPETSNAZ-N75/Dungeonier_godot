@@ -298,23 +298,27 @@ bg_color = Color(0, 0, 0, 0.282353)
 bg_color = Color(0.8, 0.16, 0.16, 1)
 
 [node name="Skeleton" type="CharacterBody2D"]
-platform_floor_layers = 4294967294
 script = ExtResource("1_eifjv")
+Health = null
+DamageAmmount = null
+Speed = null
+accel = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, -7)
 sprite_frames = SubResource("SpriteFrames_8ihau")
-animation = &"idle"
+animation = &"move"
 autoplay = "idle"
+frame_progress = 0.250818
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_jhcgl")
 
 [node name="healthBar" type="ProgressBar" parent="."]
-offset_left = -8.0
+offset_left = -9.0
 offset_top = -15.0
-offset_right = 10.0
+offset_right = 9.0
 offset_bottom = -13.0
 theme_override_styles/background = SubResource("StyleBoxFlat_jhcgl")
 theme_override_styles/fill = SubResource("StyleBoxFlat_eifjv")
@@ -330,5 +334,6 @@ one_shot = true
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_postprocessing = 2
 simplify_path = true
+debug_enabled = true
 
 [connection signal="timeout" from="KillTimer" to="." method="_on_kill_timer_timeout"]

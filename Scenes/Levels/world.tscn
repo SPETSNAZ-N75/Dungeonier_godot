@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=4 uid="uid://bb88l8dlq1032"]
+[gd_scene load_steps=7 format=4 uid="uid://bb88l8dlq1032"]
 
 [ext_resource type="Texture2D" uid="uid://bc4fd8l8likqf" path="res://Assets/character and tileset/Dungeon_Tileset.png" id="1_6pun2"]
 [ext_resource type="PackedScene" uid="uid://dlgyfytoxwkyc" path="res://Scenes/Character/Player.tscn" id="2_nbifx"]
@@ -135,6 +135,12 @@ texture = ExtResource("1_6pun2")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_go701")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_nbifx"]
+vertices = PackedVector2Array(78, 65, -80.9297, 65, -80.0703, -63, 78, 15, 335, -239, 335, -114, 254, -114, 146, -239, 254, -64, 367, -64, 367, -16, 114, 64, 114, 15, 400, -16, 400, -64, 528, -64, 528, 64, 78, -63, 78, -14, 114, -14, 226, -63, 114, -63, 226, -114, 146, -114)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(8, 9, 10, 11, 12), PackedInt32Array(13, 14, 15, 16), PackedInt32Array(13, 16, 11, 10), PackedInt32Array(2, 17, 18), PackedInt32Array(3, 2, 18, 12), PackedInt32Array(12, 18, 19), PackedInt32Array(8, 12, 19, 20), PackedInt32Array(19, 21, 20), PackedInt32Array(8, 20, 22, 6), PackedInt32Array(7, 6, 22), PackedInt32Array(7, 22, 23)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-90, -73, 88, -73, 88, -24, 104, -24, 104, -73, 216, -73, 216, -104, 136, -104, 136, -249, 345, -249, 345, -104, 264, -104, 264, -74, 377, -74, 377, -26, 390, -26, 390, -74, 538, -74, 538, 74, 399, 74, 364, 74, 104, 74, 104, 25, 88, 25, 88, 75, -91, 75)])
+border_size = 1.0
+
 [node name="world" type="Node2D"]
 
 [node name="Main" type="TileMapLayer" parent="."]
@@ -144,8 +150,28 @@ tile_set = SubResource("TileSet_5a7ea")
 [node name="Player" parent="." instance=ExtResource("2_nbifx")]
 position = Vector2(0, 42)
 
-[node name="Skeleton" parent="." instance=ExtResource("3_nbifx")]
-position = Vector2(243, -8)
+[node name="Enemies" type="Node" parent="."]
 
-[node name="Skeleton2" parent="." instance=ExtResource("3_nbifx")]
-position = Vector2(243, 23)
+[node name="Skeleton" parent="Enemies" instance=ExtResource("3_nbifx")]
+position = Vector2(118, -1)
+
+[node name="Skeleton2" parent="Enemies" instance=ExtResource("3_nbifx")]
+position = Vector2(203, 51)
+
+[node name="Skeleton3" parent="Enemies" instance=ExtResource("3_nbifx")]
+position = Vector2(468, 3)
+
+[node name="Skeleton4" parent="Enemies" instance=ExtResource("3_nbifx")]
+position = Vector2(167, -127)
+
+[node name="Skeleton5" parent="Enemies" instance=ExtResource("3_nbifx")]
+position = Vector2(350, -32)
+
+[node name="Skeleton6" parent="Enemies" instance=ExtResource("3_nbifx")]
+position = Vector2(287, -196)
+
+[node name="Navigation" type="Node" parent="."]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Navigation"]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_nbifx")
