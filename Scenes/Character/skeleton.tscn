@@ -330,5 +330,6 @@ one_shot = true
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_postprocessing = 2
 simplify_path = true
+debug_enabled = true
 
 [connection signal="timeout" from="KillTimer" to="." method="_on_kill_timer_timeout"]
