@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Dungeonier"
 config/version="0.1"
-run/main_scene="uid://bb88l8dlq1032"
+run/main_scene="uid://yi1vtrx1xma6"
 config/features=PackedStringArray("4.4", "Mobile")
 run/max_fps=60
 boot_splash/bg_color=Color(0, 0, 0, 1)
