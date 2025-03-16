@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://yi1vtrx1xma6"]
+[gd_scene load_steps=6 format=3 uid="uid://yi1vtrx1xma6"]
 
 [ext_resource type="Script" uid="uid://c08ce1h7q5pwx" path="res://Scripts/main.gd" id="1_r0du0"]
 [ext_resource type="Texture2D" uid="uid://fuubnuegibe5" path="res://Assets/Gui/Menus/btn_play.png" id="2_cm0pq"]
 [ext_resource type="Texture2D" uid="uid://babg0u4aplhmt" path="res://Assets/Gui/Menus/btn_play_pressed.png" id="3_fos0i"]
+[ext_resource type="FontFile" uid="uid://du8tl1a6818n" path="res://Assets/Fonts/Unispace Rg.otf" id="4_cm0pq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r150o"]
 size = Vector2(300, 100)
@@ -20,5 +21,22 @@ shape = SubResource("RectangleShape2D_r150o")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(640, 360)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 401.0
+offset_top = 184.0
+offset_right = 890.0
+offset_bottom = 281.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(244, 48)
+theme_override_fonts/font = ExtResource("4_cm0pq")
+theme_override_font_sizes/font_size = 80
+text = "DUNGEONIER"
 
 [connection signal="pressed" from="CanvasLayer/TouchScreenButton" to="." method="_on_touch_screen_button_pressed"]

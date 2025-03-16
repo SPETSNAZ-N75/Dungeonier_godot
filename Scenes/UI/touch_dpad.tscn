@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://4boxwssfylk3"]
+[gd_scene load_steps=19 format=3 uid="uid://4boxwssfylk3"]
 
 [ext_resource type="Texture2D" uid="uid://dehcpgn3dvxjt" path="res://Assets/Gui/dpad_sheet.png" id="1_c20tx"]
+[ext_resource type="Script" uid="uid://cmyv3vvep8p8c" path="res://Scripts/touch_dpad.gd" id="1_matm6"]
 [ext_resource type="Texture2D" uid="uid://byo3tinw8dur2" path="res://Assets/Gui/dpad_pressed_sheet.png" id="2_kmajj"]
 [ext_resource type="Texture2D" uid="uid://ro7ueyhmj3g8" path="res://Assets/Gui/btn_attack_normal.png" id="3_iteyb"]
 [ext_resource type="Texture2D" uid="uid://bikqcm5ddpesv" path="res://Assets/Gui/btn_attack_pressed.png" id="4_m4ymi"]
@@ -53,6 +54,7 @@ size = Vector2(32, 22)
 size = Vector2(32, 32)
 
 [node name="touch_dpad" type="CanvasGroup"]
+script = ExtResource("1_matm6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
