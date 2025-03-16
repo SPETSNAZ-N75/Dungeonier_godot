@@ -21,7 +21,6 @@ texture = ExtResource("3_puttd")
 script = ExtResource("1_3jfbl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
 offset_left = 248.0

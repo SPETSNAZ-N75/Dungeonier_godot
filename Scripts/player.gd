@@ -1,17 +1,18 @@
 extends CharacterBody2D
 @onready var attack_timer: Timer = $AttackTimer
 @onready var ray_cast: RayCast2D = $RayCast2D
-
+var Health = PSM.Health
+var Mana = PSM.Mana
+var DamageAmmount = PSM.Damage
 @export var SPEED = 100
-var health = 100.0
-var mana = 100.0
-var damage = 5.0
 
-signal hit(collider)
 var hit_object:Object
 
 var bIsAttacking:bool 
-
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("test") :
+		_take_Damage()
+		
 func Attack():
 	$AnimatedSprite2D.play("new_animation")
 
@@ -64,3 +65,9 @@ func attack():
 		hit_object = ray_cast.get_collider()
 		SignalManager.HitObject = hit_object
 		SignalManager._Hit.emit()
+		
+func _take_Damage() :
+	var newhealth = PSM.Health - PSM.Damage
+	PSM.Health = newhealth
+	PSM.UpdatePSM.emit()
+	
