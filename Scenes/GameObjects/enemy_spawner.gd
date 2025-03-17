@@ -23,4 +23,4 @@ func Spawn():
 		enemy_instance.global_position = spawn_pos
 		get_parent().add_child(enemy_instance)
 		pool = pool - 1
-		print(pool)
+		#print(pool)

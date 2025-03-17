@@ -2,12 +2,14 @@ extends CharacterBody2D
 @onready var attack_timer: Timer = $AttackTimer
 @onready var ray_cast: RayCast2D = $RayCast2D
 @export var SPEED = 100
+@export var Enemy : Array 
 var Health = PSM.Health
 var Mana = PSM.Mana
 var DamageAmmount = PSM.Damage
 var isDead : bool 
 var hit_object:Object
 var bIsAttacking:bool 
+var canTakeDamage:bool = false
 		
 func _ready() -> void:
 	SignalManager.PlayerHit.connect(_take_Damage)
