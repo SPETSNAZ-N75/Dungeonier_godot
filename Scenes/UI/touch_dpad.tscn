@@ -25,7 +25,7 @@ region = Rect2(64, 0, 32, 0)
 atlas = ExtResource("2_kmajj")
 region = Rect2(64, 0, 32, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmajj"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_matm6"]
 size = Vector2(22, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yi0di"]
@@ -59,35 +59,39 @@ script = ExtResource("1_matm6")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="dpad_up" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(184, 376)
-scale = Vector2(3, 3)
+position = Vector2(184, 384)
+scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_kmajj")
 texture_pressed = SubResource("AtlasTexture_xum43")
 shape = SubResource("RectangleShape2D_c20tx")
+passby_press = true
 action = "up"
 
 [node name="dpad_down" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(184, 552)
-scale = Vector2(3, 3)
+position = Vector2(184, 544)
+scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_c20tx")
 texture_pressed = SubResource("AtlasTexture_rc2b7")
-shape = SubResource("RectangleShape2D_kmajj")
+shape = SubResource("RectangleShape2D_matm6")
+passby_press = true
 action = "down"
 
 [node name="dpad_left" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(96, 464)
-scale = Vector2(3, 3)
+position = Vector2(104, 464)
+scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_yi0di")
 texture_pressed = SubResource("AtlasTexture_rqadq")
 shape = SubResource("RectangleShape2D_xum43")
+passby_press = true
 action = "left"
 
 [node name="dpad_right" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(272, 464)
-scale = Vector2(3, 3)
+position = Vector2(264, 464)
+scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_iteyb")
 texture_pressed = SubResource("AtlasTexture_m4ymi")
 shape = SubResource("RectangleShape2D_bt47r")
+passby_press = true
 action = "right"
 
 [node name="btn_attack" type="TouchScreenButton" parent="CanvasLayer"]

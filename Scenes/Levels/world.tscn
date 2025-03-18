@@ -158,7 +158,6 @@ tile_set = SubResource("TileSet_5a7ea")
 [node name="Player" parent="." instance=ExtResource("2_nbifx")]
 z_index = 5
 position = Vector2(0, 42)
-Enemy = []
 
 [node name="Enemies" type="Node" parent="."]
 

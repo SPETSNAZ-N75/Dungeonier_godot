@@ -1,9 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://dlgyfytoxwkyc"]
+[gd_scene load_steps=19 format=3 uid="uid://dlgyfytoxwkyc"]
 
 [ext_resource type="Script" uid="uid://bnxmjphf3d0wj" path="res://Scripts/player.gd" id="1_52ee3"]
 [ext_resource type="Texture2D" uid="uid://wbwhwlccgeq3" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_1.png" id="1_nn08x"]
 [ext_resource type="Texture2D" uid="uid://dmtwt2er5yc77" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_2.png" id="2_52ee3"]
-[ext_resource type="PackedScene" uid="uid://d3jnecahq4qr4" path="res://Scenes/Character/skeleton.tscn" id="2_tpskw"]
 [ext_resource type="Texture2D" uid="uid://c33vur3mfvh5g" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_3.png" id="3_bhhdu"]
 [ext_resource type="Texture2D" uid="uid://cuyhwyajfqv2p" path="res://Assets/Character_animation/priests_idle/priest3/v1/priest3_v1_4.png" id="4_megsn"]
 [ext_resource type="Texture2D" uid="uid://b11a1c4ufadom" path="res://Assets/character and tileset/Dungeon_Character.png" id="5_yoq75"]
@@ -88,7 +87,7 @@ motion_mode = 1
 platform_on_leave = 2
 platform_floor_layers = 4294967294
 script = ExtResource("1_52ee3")
-Enemy = [ExtResource("2_tpskw")]
+SPEED = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ulo2v")
