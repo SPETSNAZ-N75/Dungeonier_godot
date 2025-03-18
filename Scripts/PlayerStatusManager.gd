@@ -15,6 +15,6 @@ func _Print() :
 	print(Health)
 
 func _reset() :
-	Health = 100.0
-	Mana = 100.0
+	Health = 100
+	Mana = 100
 	HighScore = Score

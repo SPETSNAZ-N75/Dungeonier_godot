@@ -35,16 +35,20 @@ func _physics_process(_delta: float) -> void:
 	
 		if direction == Vector2(0,0) && bIsAttacking== false:
 			$AnimatedSprite2D.play("idle")
+			
 		if direction :
 			direction = direction.normalized()
 			velocity = direction * SPEED
 			$AnimatedSprite2D.play("move")
+			
 			if direction.x > 0 :
 				$AnimatedSprite2D.flip_h = false
 			else: 
 				$AnimatedSprite2D.flip_h = true
+				
 		else :
-			velocity = Vector2.ZEROdds
+			velocity = Vector2.ZERO
+			
 		move_and_slide()
 	
 		if Input.is_action_just_pressed("use"):

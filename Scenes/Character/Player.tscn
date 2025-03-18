@@ -87,7 +87,6 @@ motion_mode = 1
 platform_on_leave = 2
 platform_floor_layers = 4294967294
 script = ExtResource("1_52ee3")
-SPEED = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ulo2v")
