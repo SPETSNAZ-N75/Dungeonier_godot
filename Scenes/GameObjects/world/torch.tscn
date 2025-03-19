@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dhy8xakefdmve"]
+
+[ext_resource type="Texture2D" uid="uid://wm4raqa0amxk" path="res://Assets/items and trap_animation/torch/candlestick_2_1.png" id="1_86rvv"]
+[ext_resource type="Texture2D" uid="uid://dxhhm5pmuj0nw" path="res://Assets/items and trap_animation/torch/candlestick_2_2.png" id="2_xnldm"]
+[ext_resource type="Texture2D" uid="uid://b5tapqoe8tabi" path="res://Assets/items and trap_animation/torch/candlestick_2_3.png" id="3_nd4eu"]
+[ext_resource type="Texture2D" uid="uid://cb38wx1oac7m6" path="res://Assets/items and trap_animation/torch/candlestick_2_4.png" id="4_yfir4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ucx14"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_86rvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xnldm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nd4eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yfir4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Torch" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ucx14")
+autoplay = "default"
+frame_progress = 0.721264
