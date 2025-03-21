@@ -58,7 +58,21 @@ script = ExtResource("1_matm6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="dpad_up" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(640, 360)
+
+[node name="dpad_up" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 position = Vector2(184, 384)
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_kmajj")
@@ -67,7 +81,7 @@ shape = SubResource("RectangleShape2D_c20tx")
 passby_press = true
 action = "up"
 
-[node name="dpad_down" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="dpad_down" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 position = Vector2(184, 544)
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_c20tx")
@@ -76,7 +90,7 @@ shape = SubResource("RectangleShape2D_matm6")
 passby_press = true
 action = "down"
 
-[node name="dpad_left" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="dpad_left" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 position = Vector2(104, 464)
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_yi0di")
@@ -85,7 +99,7 @@ shape = SubResource("RectangleShape2D_xum43")
 passby_press = true
 action = "left"
 
-[node name="dpad_right" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="dpad_right" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 position = Vector2(264, 464)
 scale = Vector2(4, 4)
 texture_normal = SubResource("AtlasTexture_iteyb")
@@ -94,7 +108,7 @@ shape = SubResource("RectangleShape2D_bt47r")
 passby_press = true
 action = "right"
 
-[node name="btn_attack" type="TouchScreenButton" parent="CanvasLayer"]
+[node name="btn_attack" type="TouchScreenButton" parent="CanvasLayer/AspectRatioContainer"]
 position = Vector2(946, 490)
 scale = Vector2(3, 3)
 texture_normal = ExtResource("3_iteyb")

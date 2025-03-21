@@ -1,6 +1,5 @@
 extends CanvasGroup
 @onready var cam : Camera2D = $CanvasLayer/Camera2D
-@onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var animation_player: AnimationPlayer = $CanvasLayer/AnimationPlayer
 
 func _ready() -> void:

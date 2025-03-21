@@ -4,7 +4,7 @@ extends CanvasGroup
 @onready var manaBar : ProgressBar = $CanvasLayer/manaBar
 @onready var score: Label = $CanvasLayer/Score
 @onready var game_over_label: Label = $CanvasLayer/GameOverLabel
-@onready var btn_main_menu: TouchScreenButton = $CanvasLayer/btn_MainMenu
+@onready var btn_main_menu: TouchScreenButton = $CanvasLayer/GameOverLabel/btn_MainMenu
 
 func _ready() -> void:
 	update()

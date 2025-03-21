@@ -27,20 +27,34 @@ script = ExtResource("1_3jfbl")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="healthBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 248.0
-offset_top = 16.0
-offset_right = 424.0
-offset_bottom = 32.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -312.0
+offset_right = -208.0
+offset_bottom = -296.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_8vcfy")
 theme_override_styles/fill = SubResource("StyleBoxTexture_puttd")
 value = 50.0
 show_percentage = false
 
 [node name="manaBar" type="ProgressBar" parent="CanvasLayer"]
-offset_left = 56.0
-offset_top = 16.0
-offset_right = 232.0
-offset_bottom = 32.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -568.0
+offset_top = -312.0
+offset_right = -392.0
+offset_bottom = -296.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_3jfbl")
 theme_override_styles/fill = SubResource("StyleBoxTexture_3j5vs")
 value = 50.0
@@ -53,10 +67,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 448.0
-offset_top = -352.0
-offset_right = 540.0
-offset_bottom = -291.0
+offset_left = 464.0
+offset_top = -320.0
+offset_right = 556.0
+offset_bottom = -259.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("5_duido")
@@ -64,19 +78,27 @@ theme_override_font_sizes/font_size = 50
 text = "100"
 
 [node name="GameOverLabel" type="Label" parent="CanvasLayer"]
-offset_left = 520.17
-offset_top = 360.0
-offset_right = 856.17
-offset_bottom = 421.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -40.0
+offset_right = 232.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(168, 30)
 theme_override_fonts/font = ExtResource("5_duido")
 theme_override_font_sizes/font_size = 50
 text = "GAME OVER !"
 
-[node name="btn_MainMenu" type="TouchScreenButton" parent="CanvasLayer"]
-position = Vector2(664, 488)
+[node name="btn_MainMenu" type="TouchScreenButton" parent="CanvasLayer/GameOverLabel"]
+position = Vector2(168, 128)
 shape = SubResource("RectangleShape2D_duido")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/btn_MainMenu"]
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/GameOverLabel/btn_MainMenu"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -90,7 +112,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.151276, 0.151276, 0.151276, 1)
 
-[node name="GameOverLabel" type="Label" parent="CanvasLayer/btn_MainMenu"]
+[node name="GameOverLabel" type="Label" parent="CanvasLayer/GameOverLabel/btn_MainMenu"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -106,4 +128,4 @@ theme_override_fonts/font = ExtResource("5_duido")
 theme_override_font_sizes/font_size = 30
 text = "Main Menu"
 
-[connection signal="pressed" from="CanvasLayer/btn_MainMenu" to="." method="_on_touch_screen_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GameOverLabel/btn_MainMenu" to="." method="_on_touch_screen_button_pressed"]
