@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b33m672588l4y"
-path="res://.godot/imported/enemies-vampire_attack.png-b9c9e98bdd9fbec8cbbb07e19fa9251d.ctex"
+uid="uid://0utinewh6dhk"
+path="res://.godot/imported/enemies-skeleton2_attack.png-378bfd8c096930852a7e24ed74bfff25.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/enemies-vampire_attack.png"
-dest_files=["res://.godot/imported/enemies-vampire_attack.png-b9c9e98bdd9fbec8cbbb07e19fa9251d.ctex"]
+source_file="res://Assets/character/enemies-skeleton2_attack.png"
+dest_files=["res://.godot/imported/enemies-skeleton2_attack.png-378bfd8c096930852a7e24ed74bfff25.ctex"]
 
 [params]
 

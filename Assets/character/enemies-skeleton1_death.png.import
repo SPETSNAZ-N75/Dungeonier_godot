@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df4nw7mr3iikq"
-path="res://.godot/imported/enemies-skeleton2_idle.png-d5cf8f11e70c01fff320ef9cac47695d.ctex"
+uid="uid://ml5ox525nflm"
+path="res://.godot/imported/enemies-skeleton1_death.png-54acc581836d39f90d4b015bb21156b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/enemies-skeleton2_idle.png"
-dest_files=["res://.godot/imported/enemies-skeleton2_idle.png-d5cf8f11e70c01fff320ef9cac47695d.ctex"]
+source_file="res://Assets/character/enemies-skeleton1_death.png"
+dest_files=["res://.godot/imported/enemies-skeleton1_death.png-54acc581836d39f90d4b015bb21156b8.ctex"]
 
 [params]
 

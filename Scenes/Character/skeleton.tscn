@@ -1,10 +1,10 @@
 [gd_scene load_steps=48 format=3 uid="uid://d3jnecahq4qr4"]
 
 [ext_resource type="Script" uid="uid://6wsgyaodm0ns" path="res://Scripts/enemy.gd" id="1_eifjv"]
-[ext_resource type="Texture2D" uid="uid://nsgvmjonc04g" path="res://Assets/character and tileset/enemies-skeleton1_idle.png" id="1_jhcgl"]
-[ext_resource type="Texture2D" uid="uid://ml5ox525nflm" path="res://Assets/character and tileset/enemies-skeleton1_death.png" id="2_1877k"]
-[ext_resource type="Texture2D" uid="uid://b1f7xcbklah6" path="res://Assets/character and tileset/enemies-skeleton1_take_damage.png" id="3_3cgif"]
-[ext_resource type="Texture2D" uid="uid://v818x5vtxqdw" path="res://Assets/character and tileset/enemies-skeleton1_movement.png" id="5_web4i"]
+[ext_resource type="Texture2D" uid="uid://nsgvmjonc04g" path="res://Assets/character/enemies-skeleton1_idle.png" id="1_jhcgl"]
+[ext_resource type="Texture2D" uid="uid://ml5ox525nflm" path="res://Assets/character/enemies-skeleton1_death.png" id="2_1877k"]
+[ext_resource type="Texture2D" uid="uid://b1f7xcbklah6" path="res://Assets/character/enemies-skeleton1_take_damage.png" id="3_3cgif"]
+[ext_resource type="Texture2D" uid="uid://v818x5vtxqdw" path="res://Assets/character/enemies-skeleton1_movement.png" id="5_web4i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ihau"]
 atlas = ExtResource("2_1877k")
@@ -337,6 +337,8 @@ one_shot = true
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_postprocessing = 2
 simplify_path = true
+avoidance_enabled = true
+avoidance_layers = 2
 
 [node name="Area2D" type="Area2D" parent="."]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b11a1c4ufadom"
-path="res://.godot/imported/Dungeon_Character.png-906838917e80500bb8add79f6d81c4eb.ctex"
+uid="uid://conwokxyqm3ye"
+path="res://.godot/imported/Dungeon_Character_2.png-a2b56c893e16e565ccecce7b71012eb2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/Dungeon_Character.png"
-dest_files=["res://.godot/imported/Dungeon_Character.png-906838917e80500bb8add79f6d81c4eb.ctex"]
+source_file="res://Assets/character/Dungeon_Character_2.png"
+dest_files=["res://.godot/imported/Dungeon_Character_2.png-a2b56c893e16e565ccecce7b71012eb2.ctex"]
 
 [params]
 

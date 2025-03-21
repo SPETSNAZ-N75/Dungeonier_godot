@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b00raby87taq4"
-path="res://.godot/imported/enemies-skeleton2_movemen.png-e6597108b8ed833efe2189a118f85d91.ctex"
+uid="uid://mnyiij686mmi"
+path="res://.godot/imported/enemies-vampire_death.png-e649e08c242757676bc9dc58651f84c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/enemies-skeleton2_movemen.png"
-dest_files=["res://.godot/imported/enemies-skeleton2_movemen.png-e6597108b8ed833efe2189a118f85d91.ctex"]
+source_file="res://Assets/character/enemies-vampire_death.png"
+dest_files=["res://.godot/imported/enemies-vampire_death.png-e649e08c242757676bc9dc58651f84c3.ctex"]
 
 [params]
 

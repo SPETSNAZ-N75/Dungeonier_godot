@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v818x5vtxqdw"
-path="res://.godot/imported/enemies-skeleton1_movement.png-75f0fe2450b363a15c2cb96b95b0343a.ctex"
+uid="uid://b3p0r13i0twig"
+path="res://.godot/imported/enemies-vampire_idle.png-bf4ee76098472382c52ffa5df57ce594.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/enemies-skeleton1_movement.png"
-dest_files=["res://.godot/imported/enemies-skeleton1_movement.png-75f0fe2450b363a15c2cb96b95b0343a.ctex"]
+source_file="res://Assets/character/enemies-vampire_idle.png"
+dest_files=["res://.godot/imported/enemies-vampire_idle.png-bf4ee76098472382c52ffa5df57ce594.ctex"]
 
 [params]
 

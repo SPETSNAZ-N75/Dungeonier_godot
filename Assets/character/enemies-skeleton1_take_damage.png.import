@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1oymo4uphy8y"
-path="res://.godot/imported/enemies-skeleton1_attack.png-71831baa87e8e4326d1617fb2dd79753.ctex"
+uid="uid://b1f7xcbklah6"
+path="res://.godot/imported/enemies-skeleton1_take_damage.png-2de0cc2ff7e0b5827d610ce0b6bb0400.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/enemies-skeleton1_attack.png"
-dest_files=["res://.godot/imported/enemies-skeleton1_attack.png-71831baa87e8e4326d1617fb2dd79753.ctex"]
+source_file="res://Assets/character/enemies-skeleton1_take_damage.png"
+dest_files=["res://.godot/imported/enemies-skeleton1_take_damage.png-2de0cc2ff7e0b5827d610ce0b6bb0400.ctex"]
 
 [params]
 

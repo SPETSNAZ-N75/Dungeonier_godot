@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1f7xcbklah6"
-path="res://.godot/imported/enemies-skeleton1_take_damage.png-5fb3eb3bfe8306c71db259ce5d72a0e2.ctex"
+uid="uid://bch1p156v0ceg"
+path="res://.godot/imported/enemies-skeleton2_death2.png-fe9985e33455cb7413c916353d65936a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/enemies-skeleton1_take_damage.png"
-dest_files=["res://.godot/imported/enemies-skeleton1_take_damage.png-5fb3eb3bfe8306c71db259ce5d72a0e2.ctex"]
+source_file="res://Assets/character/enemies-skeleton2_death2.png"
+dest_files=["res://.godot/imported/enemies-skeleton2_death2.png-fe9985e33455cb7413c916353d65936a.ctex"]
 
 [params]
 

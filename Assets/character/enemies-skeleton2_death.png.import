@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0utinewh6dhk"
-path="res://.godot/imported/enemies-skeleton2_attack.png-03d3f39c0112f8f7769ff293826c19ac.ctex"
+uid="uid://drd1icrl0f8vm"
+path="res://.godot/imported/enemies-skeleton2_death.png-037348280ae2501ae5783237a7efeb6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/character and tileset/enemies-skeleton2_attack.png"
-dest_files=["res://.godot/imported/enemies-skeleton2_attack.png-03d3f39c0112f8f7769ff293826c19ac.ctex"]
+source_file="res://Assets/character/enemies-skeleton2_death.png"
+dest_files=["res://.godot/imported/enemies-skeleton2_death.png-037348280ae2501ae5783237a7efeb6e.ctex"]
 
 [params]
 
