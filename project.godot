@@ -20,7 +20,6 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 boot_splash/image="uid://dqk5ut1ty1ukf"
 config/icon="uid://brdx5qclm85d1"
-config/windows_native_icon="res://Assets/icon/icon.ico"
 boot_splash/minimum_display_time=2000
 
 [autoload]

@@ -555,7 +555,6 @@ tile_map_data = PackedByteArray("AAANACYAAAAGAAYAAAAOACYAAAAHAAYAAAAeACYAAAAGAAY
 tile_set = SubResource("TileSet_03owx")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Background2" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = 8

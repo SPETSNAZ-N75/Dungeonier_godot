@@ -19,11 +19,10 @@ func Attack():
 func _physics_process(_delta: float) -> void:
 	if !isDead :  
 		# Get the input direction and handle the movement/deceleration.
-		var direction_x := Input.get_axis("left", "right")
-		var direction_y := Input.get_axis("up", "down")
-		var direction = Vector2(direction_x, direction_y)
+
+		var direction := Input.get_vector("left", "right", "up", "down")
 		var rot_vector := Input.get_vector("left", "right", "up", "down")
-	
+		
 		if rot_vector == Vector2(1,0):
 			ray_cast.rotation_degrees = 0
 		elif rot_vector == Vector2(-1,0):
