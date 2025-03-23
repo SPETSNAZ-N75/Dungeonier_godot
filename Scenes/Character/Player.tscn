@@ -83,6 +83,7 @@ size = Vector2(12, 7)
 size = Vector2(12, 15)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 5
 motion_mode = 1
 platform_on_leave = 2
 platform_floor_layers = 4294967294

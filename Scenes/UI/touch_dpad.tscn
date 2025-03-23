@@ -57,6 +57,7 @@ size = Vector2(32, 32)
 script = ExtResource("1_matm6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="AspectRatioContainer" type="AspectRatioContainer" parent="CanvasLayer"]
 anchors_preset = 8

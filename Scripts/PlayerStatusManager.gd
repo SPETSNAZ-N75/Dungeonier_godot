@@ -11,10 +11,13 @@ signal UpdatePSM
 func _ready() -> void:
 	SignalManager.GameOver.connect(_reset)
 	
-func AddHealth() :
-	print("Health Added")
+func AddHealth(val) :
+	print("Health Added : ", val)
+func AddMana(val) :
+	print("Mana Added : ", val)
+	
 func _Print() :
-	print(Health)
+	print("PSM : SUCCESS")
 
 func _reset() :
 	Health = 100

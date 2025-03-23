@@ -9,7 +9,9 @@ var isDead : bool
 var hit_object:Object
 var bIsAttacking:bool 
 var canTakeDamage:bool = false
-		
+
+func player():
+	pass	
 func _ready() -> void:
 	SignalManager.PlayerHit.connect(_take_Damage)
 			

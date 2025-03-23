@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=3 uid="uid://cftookulvi5o4"]
+
+[ext_resource type="Texture2D" uid="uid://xv1tn4qxh0bf" path="res://Assets/items and trap_animation/flasks/flasks_3_1.png" id="1_rxk2h"]
+[ext_resource type="Texture2D" uid="uid://c4lnf8wravrrb" path="res://Assets/items and trap_animation/flasks/flasks_3_2.png" id="2_t3ukq"]
+[ext_resource type="Texture2D" uid="uid://df53dpr1y5fxd" path="res://Assets/items and trap_animation/flasks/flasks_3_3.png" id="3_x1cfx"]
+[ext_resource type="Texture2D" uid="uid://bkdu3q1wmv4ih" path="res://Assets/items and trap_animation/flasks/flasks_3_4.png" id="4_6h8f6"]
+[ext_resource type="Texture2D" uid="uid://61j5bab4f1jr" path="res://Assets/items and trap_animation/flasks/flasks_2_1.png" id="5_qwx0f"]
+[ext_resource type="Texture2D" uid="uid://dvuwmb1imqprj" path="res://Assets/items and trap_animation/flasks/flasks_2_2.png" id="6_tbthd"]
+[ext_resource type="Texture2D" uid="uid://dvum8nuh6ypqn" path="res://Assets/items and trap_animation/flasks/flasks_2_3.png" id="7_yrt37"]
+[ext_resource type="Texture2D" uid="uid://kx8v3v0kwj5x" path="res://Assets/items and trap_animation/flasks/flasks_2_4.png" id="8_15hev"]
+[ext_resource type="Script" uid="uid://bhsoaeyegir0l" path="res://Scripts/Mp_flask.gd" id="9_rxk2h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uwemp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_rxk2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t3ukq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_x1cfx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6h8f6")
+}],
+"loop": true,
+"name": &"mp_flask_big",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qwx0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_tbthd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yrt37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_15hev")
+}],
+"loop": true,
+"name": &"mp_flask_small",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r78o7"]
+radius = 8.0
+
+[node name="MpFlask" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_uwemp")
+animation = &"mp_flask_big"
+script = ExtResource("9_rxk2h")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_r78o7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

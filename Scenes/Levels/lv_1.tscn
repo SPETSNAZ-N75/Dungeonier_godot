@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://bxoxruqkuqpd0"]
+[gd_scene load_steps=9 format=4 uid="uid://bxoxruqkuqpd0"]
 
 [ext_resource type="Texture2D" uid="uid://bc4fd8l8likqf" path="res://Assets/World/Dungeon_Tileset.png" id="1_tbkpn"]
 [ext_resource type="PackedScene" uid="uid://dlgyfytoxwkyc" path="res://Scenes/Character/Player.tscn" id="2_sgkg7"]
+[ext_resource type="PackedScene" uid="uid://bdtwmls8rghqp" path="res://Scenes/GameObjects/Items/HpFlask.tscn" id="3_sljll"]
+[ext_resource type="PackedScene" uid="uid://cftookulvi5o4" path="res://Scenes/GameObjects/Items/MpFlask.tscn" id="4_3rfqu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgkg7"]
 texture = ExtResource("1_tbkpn")
@@ -253,3 +255,21 @@ tile_set = SubResource("TileSet_sgkg7")
 
 [node name="Player" parent="." instance=ExtResource("2_sgkg7")]
 position = Vector2(96, 672)
+
+[node name="Items" type="Node" parent="."]
+
+[node name="HpFlask" parent="Items" instance=ExtResource("3_sljll")]
+position = Vector2(200, 648)
+
+[node name="MpFlask" parent="Items" instance=ExtResource("4_3rfqu")]
+position = Vector2(312, 648)
+
+[node name="HpFlask2" parent="Items" instance=ExtResource("3_sljll")]
+position = Vector2(200, 696)
+Big = true
+
+[node name="MpFlask2" parent="Items" instance=ExtResource("4_3rfqu")]
+position = Vector2(312, 696)
+Big = true
+
+[node name="Enemy" type="Node" parent="."]
