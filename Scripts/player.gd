@@ -12,7 +12,8 @@ var bIsAttacking:bool
 var canTakeDamage:bool = false
 
 func player():
-	pass	
+	pass
+		
 func _ready() -> void:
 	SignalManager.PlayerHit.connect(_take_Damage)
 			

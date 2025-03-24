@@ -65,19 +65,16 @@ func _physics_process(_delta) :
 	move_and_slide()
 
 
+
 func _on_attack_timer_timeout() -> void:
-	canAttack = true
-	$Area2D/CollisionShape2D.disabled = false
+	if canAttack:
+		SignalManager.PlayerHit.emit()
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.has_method("player") && canAttack :
-		SignalManager.PlayerHit.emit()
-	else:
-		attack_timer.start()
+	if body.has_method("player"):
+		canAttack = true
 		
-
-
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	canAttack = false
-	attack_timer.stop()
+	if body.has_method("player"):
+		canAttack = false
