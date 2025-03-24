@@ -80,4 +80,3 @@ func _take_Damage() :
 		isDead = true
 		SignalManager.GameOver.emit()
 		hide()
-	

@@ -1,7 +1,6 @@
 extends CharacterBody2D
 @onready var player : CharacterBody2D = $"../../Player"
 @onready var Trigger = $Area2D
-@onready var attack_timer: Timer = $AttackTimer
 @onready var nav : NavigationAgent2D = $NavigationAgent2D
 @onready var health_bar: ProgressBar = $healthBar
 @export var Health : int = 50 
@@ -40,11 +39,6 @@ func _on_kill_timer_timeout() -> void:
 	queue_free()
 	
 func _physics_process(_delta) : 
-	
-	if Trigger.overlaps_body(player):
-		$Area2D/CollisionShape2D.disabled = true
-		
-		
 		
 	if Aggro == true :
 		var direction = Vector2()
@@ -70,11 +64,11 @@ func _on_attack_timer_timeout() -> void:
 	if canAttack:
 		SignalManager.PlayerHit.emit()
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_area_2d_body_entered(body: Node2D):
 	if body.has_method("player"):
 		canAttack = true
+		$AttackTimer.start()
 		
+
 func _on_area_2d_body_exited(body: Node2D) -> void:
-	if body.has_method("player"):
-		canAttack = false
+	canAttack = false

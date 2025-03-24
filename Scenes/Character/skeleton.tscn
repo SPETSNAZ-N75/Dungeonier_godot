@@ -289,7 +289,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_web4i"]
-radius = 8.24621
+radius = 6.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhcgl"]
 bg_color = Color(0, 0, 0, 0.282353)
@@ -298,6 +298,7 @@ bg_color = Color(0, 0, 0, 0.282353)
 bg_color = Color(0.8, 0.16, 0.16, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_web4i"]
+size = Vector2(24, 24)
 
 [node name="Skeleton" type="CharacterBody2D"]
 z_index = 1
