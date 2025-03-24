@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://bxoxruqkuqpd0"]
+[gd_scene load_steps=9 format=4 uid="uid://bxoxruqkuqpd0"]
 
 [ext_resource type="Texture2D" uid="uid://bc4fd8l8likqf" path="res://Assets/World/Dungeon_Tileset.png" id="1_tbkpn"]
 [ext_resource type="PackedScene" uid="uid://dlgyfytoxwkyc" path="res://Scenes/Character/Player.tscn" id="2_sgkg7"]
@@ -242,6 +242,11 @@ texture = ExtResource("1_tbkpn")
 [sub_resource type="TileSet" id="TileSet_sgkg7"]
 sources/0 = SubResource("TileSetAtlasSource_tbkpn")
 
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_x8gpr"]
+vertices = PackedVector2Array(366, 578, 366, 630, 338, 630, 338, 614, 174, 614, 174, 630, 146, 630, 146, 614, 130, 614, 130, 594, 338, 594, 338, 578, 347.891, 80.5234, -96.1094, 80.5234, -96.1094, -123.477, 347.891, -123.477)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(4, 7, 10), PackedInt32Array(3, 4, 10), PackedInt32Array(0, 3, 10), PackedInt32Array(0, 10, 11), PackedInt32Array(12, 13, 14, 15)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(120, 584, 328, 584, 328, 568, 376, 568, 376, 640, 328, 640, 328, 624, 184, 624, 184, 640, 136, 640, 136, 624, 120, 624), PackedVector2Array(-106.107, -133.476, 357.893, -133.476, 357.893, 90.5236, -106.107, 90.5236)])
+
 [node name="lv_1" type="Node2D"]
 
 [node name="World" type="TileMapLayer" parent="."]
@@ -253,7 +258,7 @@ tile_map_data = PackedByteArray("AAAEACcAAAAEAAYAACAHACcAAAAEAAYAADASAAkAAAAEAAY
 tile_set = SubResource("TileSet_sgkg7")
 
 [node name="Player" parent="." instance=ExtResource("2_sgkg7")]
-position = Vector2(240, 672)
+position = Vector2(96, 672)
 
 [node name="Items" type="Node" parent="."]
 
@@ -261,3 +266,7 @@ position = Vector2(240, 672)
 
 [node name="Skeleton" parent="Enemy" instance=ExtResource("5_3rfqu")]
 position = Vector2(256, 672)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(162.107, 629.476)
+navigation_polygon = SubResource("NavigationPolygon_x8gpr")

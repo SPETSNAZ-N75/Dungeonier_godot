@@ -2,7 +2,7 @@ extends Node
 
 var Health : float = 100
 var Mana : float = 100
-var Damage : float = 1
+var Damage : float = 10
 var Score : int = 0
 var HighScore : int = 0 
 
