@@ -2,6 +2,7 @@ extends CharacterBody2D
 @onready var attack_timer: Timer = $AttackTimer
 @onready var ray_cast: RayCast2D = $RayCast2D
 @export var SPEED = 100
+const BOOLET = preload("res://Scenes/FX/boolet.tscn")
 var Health = PSM.Health
 var Mana = PSM.Mana
 var DamageAmmount = PSM.Damage
@@ -67,6 +68,9 @@ func attack():
 		SignalManager.HitObject = hit_object
 		SignalManager._Hit.emit()
 		
+func attack_alt():
+	pass
+	
 func _take_Damage() :
 	var newhealth = PSM.Health - PSM.Damage
 	PSM.Health = newhealth
