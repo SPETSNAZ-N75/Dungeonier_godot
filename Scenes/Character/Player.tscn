@@ -152,4 +152,7 @@ scale = Vector2(2.66667, 2.66667)
 position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_gurq1")
 
+[node name="bulletpos" type="Marker2D" parent="."]
+position = Vector2(16, 0)
+
 [connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

@@ -1,6 +1,5 @@
 extends CharacterBody2D
-@onready var player : CharacterBody2D = $"../../Player"
-@onready var Trigger = $Area2D
+@onready var player 
 @onready var nav : NavigationAgent2D = $NavigationAgent2D
 @onready var health_bar: ProgressBar = $healthBar
 @export var Health : int = 50 
@@ -73,12 +72,13 @@ func _on_area_2d_body_entered(body: Node2D):
 		$AttackTimer.start()
 		
 
-func _on_area_2d_body_exited(body: Node2D) -> void:
+func _on_area_2d_body_exited(_body: Node2D) -> void:
 	canAttack = false
 
 # Enemy Aggro on Player Enter Collison shape
 func _on_aggro_range_body_entered(body: Node2D) -> void:
 	if body.has_method("player"):
+		player = body
 		Aggro = true
-func _on_aggro_range_body_exited(body: Node2D) -> void:
+func _on_aggro_range_body_exited(_body: Node2D) -> void:
 	Aggro = false

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6v7rnlnbc46n"
-path="res://.godot/imported/boolet.png-c2f5eeb67ae0951164849f76ff291d0a.ctex"
+uid="uid://bi2kyigtkjai5"
+path="res://.godot/imported/boolet_fx.png-dd4fb41d3bd7bd7d088087385c800dfb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fx/boolet.png"
-dest_files=["res://.godot/imported/boolet.png-c2f5eeb67ae0951164849f76ff291d0a.ctex"]
+source_file="res://Assets/Fx/boolet_fx.png"
+dest_files=["res://.godot/imported/boolet_fx.png-dd4fb41d3bd7bd7d088087385c800dfb.ctex"]
 
 [params]
 

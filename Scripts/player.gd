@@ -59,7 +59,12 @@ func _physics_process(_delta: float) -> void:
 			attack_timer.start()
 			$AnimatedSprite2D.play("attack")
 			attack()
-	
+		if Input.is_action_just_pressed("fire_alt"):
+			bIsAttacking = true
+			$AnimatedSprite2D.play("attack")
+			attack_timer.start()
+			attack_alt()
+			
 func _on_attack_timer_timeout() -> void:
 	bIsAttacking = false
 	
@@ -70,7 +75,10 @@ func attack():
 		SignalManager._Hit.emit()
 		
 func attack_alt():
-	pass
+	var bullet_instance = BOOLET.instantiate()
+	bullet_instance.spawnpos = $RayCast2D.global_position 
+	bullet_instance.spawnrot = $RayCast2D.global_rotation
+	get_tree().get_root().add_child(bullet_instance)
 	
 func _take_Damage() :
 	var newhealth = PSM.Health - PSM.Damage
