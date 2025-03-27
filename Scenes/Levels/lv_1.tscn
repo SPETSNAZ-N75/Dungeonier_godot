@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://bxoxruqkuqpd0"]
+[gd_scene load_steps=10 format=4 uid="uid://bxoxruqkuqpd0"]
 
 [ext_resource type="Texture2D" uid="uid://bc4fd8l8likqf" path="res://Assets/World/Dungeon_Tileset.png" id="1_tbkpn"]
 [ext_resource type="PackedScene" uid="uid://dlgyfytoxwkyc" path="res://Scenes/Character/Player.tscn" id="2_sgkg7"]
+[ext_resource type="PackedScene" uid="uid://3s83ygnvbuls" path="res://Scenes/GameObjects/world/wall_illus_N.tscn" id="4_sljll"]
 [ext_resource type="PackedScene" uid="uid://d3jnecahq4qr4" path="res://Scenes/Character/skeleton.tscn" id="5_3rfqu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sgkg7"]
@@ -267,6 +268,43 @@ position = Vector2(96, 672)
 [node name="Skeleton" parent="Enemy" instance=ExtResource("5_3rfqu")]
 position = Vector2(256, 672)
 
+[node name="Skeleton2" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(126, 526)
+
+[node name="Skeleton3" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(300, 559)
+
+[node name="Skeleton4" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(358, 230)
+
+[node name="Skeleton5" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(734, 418)
+
+[node name="Skeleton6" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(602, 218)
+
+[node name="Skeleton7" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(749, 302)
+
+[node name="Skeleton8" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(749, 215)
+
+[node name="Skeleton9" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(161, 112)
+
+[node name="Skeleton10" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(920, 96)
+
+[node name="Skeleton11" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(895, 333)
+
+[node name="Skeleton12" parent="Enemy" instance=ExtResource("5_3rfqu")]
+position = Vector2(670, 670)
+
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 position = Vector2(162.107, 629.476)
 navigation_polygon = SubResource("NavigationPolygon_x8gpr")
+
+[node name="WallIllus" parent="." instance=ExtResource("4_sljll")]
+position = Vector2(360, 312)

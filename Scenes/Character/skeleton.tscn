@@ -420,6 +420,7 @@ shape = SubResource("RectangleShape2D_web4i")
 [node name="AttackTimer" type="Timer" parent="."]
 
 [node name="AggroRange" type="Area2D" parent="."]
+modulate = Color(1, 1, 1, 0.145098)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AggroRange"]
 shape = SubResource("CircleShape2D_gvmy4")
